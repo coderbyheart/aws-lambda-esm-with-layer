@@ -9,3 +9,7 @@
 The `NODE_PATH` variable is not supported by the ESM loader in Node, as seen [here](https://nodejs.org/docs/latest-v14.x/api/esm.html#esm_no_node_path). In addition, the `NODE_PATH` is not part of resolving import specifiers, which means the layer cannot be reached.
 
 The [workaround](./user/index.js) would be to use a module from a layer, which would be to expose the dynamic import function from the module that you require.
+
+---
+
+> Using that workaround I cannot `import { s3 } from 'esm_in_layer'` but use explicit, async loading. Adding this boilerplate code to all lambdas adds additional workload which I want to avoid. 
