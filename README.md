@@ -1,3 +1,7 @@
+> ℹ️ *Note*: [symlinking the node_modules folder](https://github.com/vibe/aws-esm-modules-layer-support) is a simpler solution.
+
+## Instructions
+
 1. Run `make`.
 1. Create a Node JS 14 Lambda Function from `dist/lambda-nodejs14.zip`.
 1. Create a Lambda Layer from `dist/layer.zip`.
